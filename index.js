@@ -25,7 +25,7 @@ app.use(express.json());
 
 app.get("/webhook", async (req, res) => {
     try {
-        const renderResponse = await axios.get('YOUR_RENDER_SERVICE_URL');
+        const renderResponse = await axios.get('https://ingestion-nyxi.onrender.com');
         const data = renderResponse.data;
         return res.json({ message: "Ok", data: data });
     } catch (error) {
