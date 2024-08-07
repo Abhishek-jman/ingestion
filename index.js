@@ -9,7 +9,13 @@ app.use(cors())
 
 app.get("/webhook", (req, res) => {
     const body = req.body;
+
     return res.json({ message: "Ok" })
+})
+
+app.post("/webhook", (req,res) => {
+    const body = req.body;
+    return res.json({message: "OK"})
 })
 
 app.listen(5000, () => console.log(5000))
